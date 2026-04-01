@@ -1,0 +1,33 @@
+.intro { background: var(--surface); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Photo */
+.photoCol {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-xl);
+  object-fit: cover;
+  box-shadow: var(--sh-lg);
+}
+
+/* Text */
+.text {}
+.text h2 { margin-bottom: .5rem; }
+.text p { color: var(--text-muted); line-height: 1.8; }
+.text strong { color: var(--text-body); font-weight: 500; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}

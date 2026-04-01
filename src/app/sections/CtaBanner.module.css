@@ -1,0 +1,62 @@
+.banner {
+  background: var(--teal-600);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/svg%3E");
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+.text {}
+.eyebrow {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  margin-bottom: .6rem;
+}
+.text h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: #fff;
+  margin-bottom: .8rem;
+  font-weight: 400;
+}
+.text h2 em { color: var(--teal-100); }
+.sub {
+  color: rgba(255,255,255,.7);
+  font-size: .95rem;
+  max-width: 440px;
+  line-height: 1.7;
+  margin: 0;
+}
+.action {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+}
+.hint {
+  font-size: .72rem;
+  color: rgba(255,255,255,.45);
+  margin: 0;
+  letter-spacing: .03em;
+}
+
+@media (max-width: 768px) {
+  .inner { flex-direction: column; gap: 2.5rem; align-items: flex-start; }
+  .action { align-items: flex-start; }
+}

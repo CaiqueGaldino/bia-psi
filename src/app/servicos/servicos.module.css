@@ -1,0 +1,111 @@
+.pageHero {
+  padding: 160px 0 80px;
+  background: var(--branco);
+  text-align: center;
+}
+.pageHero h1 { margin-bottom: 1.1rem; }
+.pageHero p { max-width: 600px; margin: 0 auto; color: var(--texto-sub); font-size: 1.08rem; }
+
+/* Services */
+.servicosSection { padding: 80px 0; background: var(--bege); }
+.servicoItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.servicoItem:last-child { margin-bottom: 0; }
+.reverse { direction: rtl; }
+.reverse > * { direction: ltr; }
+
+.servicoVisual {
+  background: var(--verde-pale);
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.servicoVisual::after {
+  content: '';
+  position: absolute;
+  bottom: -30px; right: -30px;
+  width: 130px; height: 130px;
+  background: var(--verde-light);
+  border-radius: 50%;
+  opacity: .25;
+}
+.servicoEmoji { display: flex; align-items: center; justify-content: center; position: relative; z-index: 2; }
+.animationIcon { display: flex; align-items: center; justify-content: center; width: 400px !important; height: 400px !important; }
+.servicoText h2 { margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: clamp(1.4rem,3vw,2.1rem); }
+.servicoText p { color: var(--texto-sub); margin-bottom: 1rem; }
+.servicoList { margin: 1.2rem 0 1.8rem; list-style: none; padding: 0; }
+.servicoList li {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  padding: .45rem 0;
+  color: var(--texto-sub);
+  font-size: .92rem;
+}
+.check { color: var(--verde-dark); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+/* Como funciona */
+.comoFunciona {
+  background: var(--verde-pale);
+  padding: 90px 0;
+  text-align: center;
+}
+.passosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1rem;
+}
+.passoCard {
+  background: var(--branco);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.8rem;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+.passoNum {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--verde-pale);
+  line-height: 1;
+  margin-bottom: .4rem;
+  -webkit-text-stroke: 2px var(--verde-light);
+}
+.passoCard h3 { font-size: 1rem; margin-bottom: .4rem; }
+.passoCard p { font-size: .86rem; color: var(--texto-sub); margin: 0; }
+
+/* Info cards */
+.infoCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.infoCard {
+  background: var(--branco);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  text-align: center;
+}
+.infoIcon { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.infoLabel { font-size: .73rem; font-weight: 600; color: var(--texto-light); letter-spacing: .08em; text-transform: uppercase; }
+.infoValue { font-size: .9rem; font-weight: 600; color: var(--texto); }
+
+@media (max-width: 900px) {
+  .servicoItem, .reverse { grid-template-columns: 1fr; direction: ltr; }
+}

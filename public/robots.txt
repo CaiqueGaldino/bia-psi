@@ -1,0 +1,22 @@
+# Robots.txt for beatrizsilvestrelira.com.br
+
+User-agent: *
+Allow: /
+Disallow: /privacidade
+Disallow: /lgpd
+Disallow: /.next/
+Disallow: /api/
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay for other bots
+User-agent: *
+Crawl-delay: 1
+
+Sitemap: https://beatrizsilvestrelira.com.br/sitemap.xml

@@ -1,0 +1,166 @@
+.pageHero {
+  padding: 160px 0 80px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.pageHero h1 { margin-bottom: .8rem; }
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: var(--accent-pale);
+  border: 1px solid var(--teal-100);
+  border-radius: var(--r-full);
+  padding: .3rem .85rem;
+  margin-bottom: 1.2rem;
+}
+.heroSub {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* About */
+.aboutSection { background: var(--bg); }
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.textWrap h2 { margin-bottom: .7rem; }
+.textWrap p { color: var(--text-muted); margin-bottom: .9rem; line-height: 1.8; }
+.textWrap strong { color: var(--text-body); font-weight: 500; }
+
+/* Values card */
+.valuesCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  position: sticky;
+  top: 100px;
+}
+.valuesTop { padding: 1.8rem; }
+.valuesTitle {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+.valueRow {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .88rem;
+  color: var(--text-body);
+  padding: .5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.valueRow:last-child { border-bottom: none; }
+.valuesBadge {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  background: var(--accent-pale);
+  padding: 1rem 1.8rem;
+  border-top: 1px solid var(--teal-100);
+}
+
+/* ACT */
+.actSection { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.actHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+.actSub { color: var(--text-muted); font-size: .95rem; line-height: 1.75; padding-top: .5rem; }
+.actGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.actCard {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.8rem 1.5rem;
+  transition: var(--transition);
+}
+.actCard:hover { border-color: var(--teal-100); box-shadow: var(--sh-sm); }
+.actNum {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  color: var(--teal-100);
+  line-height: 1;
+  margin-bottom: .7rem;
+}
+.actCard h3 { font-size: .95rem; margin-bottom: .4rem; color: var(--text-primary); }
+.actCard p { font-size: .84rem; color: var(--text-muted); margin: 0; line-height: 1.65; }
+
+/* Diferenciais */
+.diferenciaisSection { background: var(--bg); }
+.difTitle { margin-bottom: 2.5rem; }
+.diferenciaisGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.diferencialCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition: var(--transition);
+}
+.diferencialCard:hover { border-color: var(--teal-100); transform: translateX(3px); }
+.dIcon {
+  width: 38px; height: 38px;
+  border-radius: var(--r-md);
+  background: var(--accent-pale);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.diferencialCard strong { display: block; font-size: .9rem; font-weight: 600; color: var(--text-primary); margin-bottom: .3rem; }
+.diferencialCard span { font-size: .83rem; color: var(--text-muted); line-height: 1.6; }
+
+/* CTA */
+.ctaSection { background: var(--surface); border-top: 1px solid var(--border); }
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.ctaInner h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); margin-bottom: .5rem; }
+.ctaInner p { color: var(--text-muted); font-size: .95rem; }
+.ctaBtns { display: flex; gap: .85rem; flex-shrink: 0; }
+
+@media (max-width: 1000px) {
+  .actGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .valuesCard { position: static; }
+  .actHeader { grid-template-columns: 1fr; gap: 1.5rem; }
+  .diferenciaisGrid { grid-template-columns: 1fr; }
+  .ctaInner { flex-direction: column; align-items: flex-start; }
+  .ctaBtns { flex-direction: column; width: 100%; }
+}
+@media (max-width: 600px) {
+  .actGrid { grid-template-columns: repeat(2, 1fr); }
+}

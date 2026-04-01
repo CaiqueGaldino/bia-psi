@@ -1,0 +1,81 @@
+.footer {
+  background: var(--ink-900);
+  color: rgba(255,255,255,.55);
+  padding: 64px 0 28px;
+}
+.inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 3.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  margin-bottom: 1.8rem;
+}
+.brand .name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: .2rem;
+  font-weight: 400;
+  margin-top: .8rem;
+}
+.brandLogo {
+  margin-bottom: .5rem;
+}
+.brand .crp {
+  font-size: .68rem;
+  color: rgba(255,255,255,.35);
+  margin-bottom: 1rem;
+  letter-spacing: .06em;
+}
+.brand p {
+  font-size: .83rem;
+  line-height: 1.7;
+  margin-bottom: 1.4rem;
+  max-width: 300px;
+}
+.contacts { display: flex; flex-direction: column; gap: .5rem; }
+.contactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .8rem;
+  color: rgba(255,255,255,.45);
+  transition: color .2s;
+}
+.contactItem:hover { color: var(--teal-100); }
+
+.col h4 {
+  font-size: .68rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.8);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+.col ul li { margin-bottom: .5rem; }
+.col ul li a {
+  font-size: .83rem;
+  color: rgba(255,255,255,.45);
+  transition: color .2s;
+}
+.col ul li a:hover { color: var(--teal-100); }
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: .75rem;
+  color: rgba(255,255,255,.3);
+}
+.bottomLinks { display: flex; gap: 1.5rem; }
+.bottomLinks a { color: rgba(255,255,255,.3); transition: color .2s; }
+.bottomLinks a:hover { color: var(--teal-100); }
+
+@media (max-width: 900px) { .inner { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) {
+  .inner { grid-template-columns: 1fr; gap: 2rem; }
+  .bottom { flex-direction: column; align-items: flex-start; }
+}
