@@ -70,9 +70,9 @@ export const metadata: Metadata = {
     google: 'google-site-verification-code',
   },
   icons: {
-    icon: '/images/logo.png',
-    shortcut: '/images/logo.png',
-    apple: '/images/logo.png',
+    icon: '/bia-psi/images/logo.png',
+    shortcut: '/bia-psi/images/logo.png',
+    apple: '/bia-psi/images/logo.png',
   },
 }
 
@@ -103,8 +103,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Verification and Additional Meta */}
         <link rel="canonical" href="https://beatrizsilvestrelira.com.br" />
-        <link rel="icon" href="/images/logo.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
+        <link rel="icon" href="/bia-psi/images/logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/bia-psi/images/logo.png" />
         <meta name="theme-color" content="#537F80" />
       </head>
       <body>

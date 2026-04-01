@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import { AppImage } from './AppImage'
 import { usePathname } from 'next/navigation'
 import styles from './Navbar.module.css'
 
@@ -31,7 +31,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} aria-label="Beatriz Silvestre – Psicóloga">
-          <Image
+          <AppImage
             src="/images/logo.png"
             alt="Beatriz Silvestre Lira - Logo"
             width={32}

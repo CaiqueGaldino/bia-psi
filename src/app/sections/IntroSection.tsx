@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import Image from 'next/image'
+import { AppImage } from '@/components/AppImage'
 import styles from './IntroSection.module.css'
 
 export default function IntroSection() {
@@ -11,7 +11,7 @@ export default function IntroSection() {
 
           {/* Photo visual */}
           <div className={styles.photoCol}>
-            <Image
+            <AppImage
               src="/images/foto2.jpg"
               alt="Beatriz Silvestre"
               width={320}

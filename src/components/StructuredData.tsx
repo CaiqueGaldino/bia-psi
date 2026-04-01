@@ -1,12 +1,16 @@
+'use client'
+
+import { BASE_URL, PUBLIC_URL } from '@/lib/constants'
+
 export function LocalBusinessSchema() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://beatrizsilvestrelira.com.br',
+    '@id': BASE_URL,
     name: 'Beatriz Silvestre - Psicóloga CRP 11/24329',
     description: 'Psicóloga especializada em ansiedade, autocobrança e saúde emocional para adolescentes e adultos em Juazeiro do Norte e online.',
-    image: 'https://beatrizsilvestrelira.com.br/images/foto.jpg',
-    url: 'https://beatrizsilvestrelira.com.br',
+    image: `${PUBLIC_URL}/foto.jpg`,
+    url: BASE_URL,
     telephone: '+5588999133606',
     email: 'beatrizsilvestrepsi@gmail.com',
     address: {
@@ -43,7 +47,7 @@ export function ProfessionalSchema() {
     '@context': 'https://schema.org',
     '@type': 'HealthAndBeautyBusiness',
     name: 'Beatriz Silvestre - Psicóloga CRP 11/24329',
-    url: 'https://beatrizsilvestrelira.com.br',
+    url: BASE_URL,
     telephone: '+5588999133606',
     email: 'beatrizsilvestrepsi@gmail.com',
     knowsAbout: [
@@ -163,8 +167,8 @@ export function OrganizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Beatriz Silvestre - Psicóloga',
-    url: 'https://beatrizsilvestrelira.com.br',
-    logo: 'https://beatrizsilvestrelira.com.br/images/logo.png',
+    url: BASE_URL,
+    logo: `${PUBLIC_URL}/logo.png`,
     sameAs: [
       'https://instagram.com/beatrizsilvestrepsi',
       'https://facebook.com/beatrizsilvestrepsi',

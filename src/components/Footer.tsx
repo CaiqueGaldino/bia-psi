@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { AppImage } from './AppImage'
 import styles from './Footer.module.css'
 import { IconPhone, IconMail } from '@/components/Icons'
 
@@ -11,7 +11,7 @@ export default function Footer() {
 
           <div className={styles.brand}>
             <div className={styles.brandLogo}>
-              <Image
+              <AppImage
                 src="/images/logo-branca.png"
                 alt="Beatriz Silvestre - Logo"
                 width={40}

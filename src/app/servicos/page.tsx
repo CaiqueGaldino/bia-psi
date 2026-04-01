@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import { AppImage } from '@/components/AppImage'
 import styles from './servicos.module.css'
 import Link from 'next/link'
 import { IconCalendar, IconClock, IconMonitor, IconPin } from '@/components/Icons'
@@ -62,7 +62,7 @@ export default function ServicosPage() {
           {servicos.map((s, i) => (
             <div key={s.title} className={`${styles.servicoItem} ${i % 2 !== 0 ? styles.reverse : ''}`}>
               <div className={styles.servicoVisual}>
-                <Image
+                <AppImage
                   src={s.icon}
                   alt={s.title}
                   width={400}
