@@ -1,7 +1,7 @@
 'use client'
 import styles from './HeroSection.module.css'
 import Link from 'next/link'
-import { AppImage } from '@/components/AppImage'
+import Image from 'next/image'
 import { IconWhatsApp, IconArrow, IconChevronDown, IconShield } from '@/components/Icons'
 
 export default function HeroSection() {
@@ -54,8 +54,8 @@ export default function HeroSection() {
         <div className={styles.photoCol}>
           <div className={styles.photoFrame}>
             {/* Foto da psicóloga para a hero section */}
-            <AppImage
-              src="/images/foto.jpg"
+            <Image
+              src="/bia-psi/images/foto.jpg"
               alt="Beatriz Silvestre Lira, psicóloga CRP 11/24329"
               fill
               style={{ objectFit: 'cover', objectPosition: 'center top' }}

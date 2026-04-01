@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     url: baseUrl,
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/bia-psi/images/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Beatriz Silvestre - Psicóloga',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: 'Beatriz Silvestre – Psicóloga em Juazeiro do Norte',
     description:
       'Psicoterapia para viver com mais leveza, clareza e propósito.',
-    images: ['/images/og-image.jpg'],
+    images: ['/bia-psi/images/og-image.jpg'],
   },
   robots: {
     index: true,

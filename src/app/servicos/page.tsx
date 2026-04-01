@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AppImage } from '@/components/AppImage'
+import Image from 'next/image'
 import styles from './servicos.module.css'
 import Link from 'next/link'
 import { IconCalendar, IconClock, IconMonitor, IconPin } from '@/components/Icons'
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const servicos = [
   {
-    icon: '/images/coracao.png',
+    icon: '/bia-psi/images/coracao.png',
     title: 'Psicoterapia Individual',
     desc: 'Um espaço seguro, acolhedor e confidencial para você compreender suas emoções, pensamentos e padrões de comportamento. Trabalhamos juntas para que você desenvolva recursos internos e construa uma vida mais alinhada com seus valores.',
     items: [
@@ -25,7 +25,7 @@ const servicos = [
     ],
   },
   {
-    icon: '/images/planta.png',
+    icon: '/bia-psi/images/planta.png',
     title: 'Terapia para Adolescentes',
     desc: 'A adolescência é uma fase de descobertas, mas também de muitos desafios. Ofereço um espaço de escuta ativa e acolhimento para jovens que precisam de apoio emocional para navegar essa fase com mais equilíbrio.',
     items: [
@@ -62,7 +62,7 @@ export default function ServicosPage() {
           {servicos.map((s, i) => (
             <div key={s.title} className={`${styles.servicoItem} ${i % 2 !== 0 ? styles.reverse : ''}`}>
               <div className={styles.servicoVisual}>
-                <AppImage
+                <Image
                   src={s.icon}
                   alt={s.title}
                   width={400}
